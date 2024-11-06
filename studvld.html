@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Webpage !</title>
+    <link rel="stylesheet" href="loginA.css"/>
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+
+  </head>
+  <body>
+    <div class="container" ng-app="userValidationApp" ng-controller="UserController">
+      <div class="img">
+        <img src="https://miro.medium.com/v2/resize:fit:1200/1*hMSBm_jilmeaXCxB58BG5A.jpeg" />
+      </div>
+      <div class="login-container">
+        <form action="index.html" name="loginForm" ng-submit="submitForm()">
+          <img class="avator" src="https://pbs.twimg.com/profile_images/1634150060589223937/kvVk3oRh_400x400.jpg" />
+          <h2>Mlrit, Join us</h2>
+          <div class="input-div" one>
+            <div class="i">
+              <i class="fas fa-user"></i>
+            </div>
+            <div>
+              <h5>Username</h5>
+              <input class="input" type="text" name="username" ng-model="username" required/>
+            </div>
+          </div>
+          <div class="input-div" two>
+            <div class="i">
+              <i class="fas fa-lock"></i>
+            </div>
+            <div>
+              <h5>password</h5>
+              <input class="input" type="password" name="password" ng-model="password" required/>
+            </div>
+          </div>
+          <a href="#">Forgot password ?</a>
+          <!-- <input type="submit" class="btn" value="Login" /> -->
+          <button type="submit" class="btn" value="Login">Login</button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      Copyright © 2020 - All rights Reserved - Designed by AhsanParadise
+    </footer>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
+
+<script>
+    
+  // function ad(){
+
+  // }
+
+angular.module("userValidationApp", [])
+    .controller("UserController", function($scope) {
+      event.preventDefault();
+// Specify the valid username and password
+      // const validUsername = "user123";
+      // const validPassword = "pass123";
+      const un=$scope.username;
+      const pa=$scope.password;
+      
+      $scope.submitForm = function() {
+          var AC={
+      "mukesh":  "abc",
+      "mahesh": "xyz"
+  };
+        // Check if the provided username and password match the valid values
+      //   console.log(AC.mukesh);
+      //   console.log($scope.username);
+      const us=$scope.username.toString();
+      let pa=$scope.password.toString();
+      let f=0;
+      // console.log(AC.$scope.username);
+      
+      for(var i in AC){
+          if(i===us){
+              if(AC[i]===pa){
+                  f=1;
+                  // window.location.href="#";
+                  window.open("stud.html");
+              }
+          }
+      }
+      if(f==0){
+          alert("The credentials are invlaid");
+      }
+      //   if(f==1){
+      //   if (pa == AC.un) {
+      //     // Successful login
+      //     // alert("Login successful! Welcome, " + $scope.username);
+      //     window.location.href="UI.html";
+      //     // $scope.invalidCredentials = false;
+      //   }
+      // else {
+      //             // Display invalid credentials message
+      //             // $scope.invalidCredentials = true;
+      //             alert("The credentials entered are not right!!");
+      //         }
+      //     }
+          
+      };
+  });
+</script>
+
+
+<script>
+    const inputs = document.querySelectorAll(".input");
+
+function focusFunx() {
+  let parent = this.parentNode.parentNode;
+  parent.classList.add("focus");
+}
+
+inputs.forEach((input) => {
+  input.addEventListener("focus", focusFunx);
+});
+</script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: linear-gradient(90deg, #021401 0%, #54738b 35%, #fdfdfd 100%);
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .portal-container {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 80%;
+            max-width: 600px;
+            margin: 20px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .student-info {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .student-info img {
+            border-radius: 50%;
+            max-width: 150px;
+            height: auto;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(2, 4, 1, 0.2)  ;
+
+        }
+
+        .info-item {
+            margin: 10px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .portal-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--Navbar-->
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Student Portal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Logout</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Certifications</a>
+              </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                More
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="stud.html">Student-1</a></li>
+                <li><a class="dropdown-item" href="stud3.html">Student-3</a></li>
+                <!-- <li> -->
+                  <!-- <hr class="dropdown-divider"> -->
+                <!-- </li> -->
+                <!-- <li><a class="dropdown-item" href="#">Coding Perfomance</a></li> -->
+              </ul>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+<script>
+    let a=documents.getElementById("username").value;
+    console.log(a);
+</script>
+
+
+<div class="portal-container">
+    <div class="student-info">
+        <img src="https://i.pinimg.com/564x/40/06/78/400678a50d3d3d8a97c286caa18e3e1e.jpg" alt="Student Photo">
+        <h2>Leo Das</h2>
+    </div>
+    <div class="info-item">
+        <strong>Roll Number:</strong> STU12345
+    </div>
+    <div class="info-item">
+        <strong>Department:</strong> Computer Science
+    </div>
+    <div class="info-item">
+        <strong>Year:</strong> 3rd Year
+    </div>
+    <div class="info-item">
+        <strong>Email:</strong> Leo.doe@example.com
+    </div>
+    <div class="info-item">
+        <strong>Phone:</strong> 9890780999
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
